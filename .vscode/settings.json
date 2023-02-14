@@ -1,0 +1,19 @@
+{
+    "colorize.colorized_variables": [
+
+        "CSS",
+        "JAVASCRIPT",
+        "TYPESCRIPT"
+
+    ],
+    "colorize.include": [
+
+        "**/*.css",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.less",
+        "**/*.ts",
+        "**/*.js",
+        "**/*.styl"
+    ]
+}
