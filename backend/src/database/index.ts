@@ -2,14 +2,14 @@ import { DataSource } from 'typeorm';
 
 export const PostgresDataSource = new DataSource({
     type: "postgres",
-    host: "fanny.db.elephantsql.com",
+    host: "suleiman.db.elephantsql.com",
     port: 5432,
-    username: "uucrphln",
-    password: "Onz2YbNP34MTXEDHpCkA3yNlg-B81Wa0",
-    database: "uucrphln",
-    entities: ["/entities/*.ts"
-    ],
-    migrations: ["/migrations./*.ts"],
+    username: "vuwhulxs",
+    synchronize: true,
+    password: "KfV6lvoy8AeZrzRPexiB-x6YQ6DNgx6v",
+    database: "vuwhulxs",
+    entities: ['./src/database/entities/*.{ts,js}'],
+    migrations: [`${__dirname}/**/database/migrations/*.{ts,js}`],
     uuidExtension: 'uuid-ossp',
 })
 

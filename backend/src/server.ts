@@ -1,4 +1,4 @@
-import { User, Survey, SurveyUser } from './database/entities/entities';
+//import { User, Survey, SurveyUser } from './database/entities/entities';
 import "reflect-metadata";
 import express from 'express';
 
@@ -21,6 +21,8 @@ PostgresDataSource.initialize()
     })
 
 const app = express();
+
+//app.use(express.json());
 
 app.get("/users", (request,response) => {
     //return response.send("Hello World - Matheus");

@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "tsnd node_modules/typeorm/cli.js -- -d ./src/database/index.ts",
+    "migration:generate": "typeorm-ts-node-commonjs -d ./src/database/index.ts migration:generate ./src/database/migrations/",
+    "migration:run": "typeorm-ts-node-commonjs -d ./src/database/index.ts migration:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +19,7 @@
     "pg": "^8.9.0",
     "postgres": "^3.3.3",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.12"
+    "typeorm": "^0.3.7"
   },
   "devDependencies": {
     "@types/express": "^4.17.16",
