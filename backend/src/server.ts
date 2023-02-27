@@ -4,6 +4,7 @@ import express from 'express';
 
 import "./database/index.ts";
 import { PostgresDataSource } from "./database";
+import { router } from "./routes";
 
 /*
  GET => Busca
@@ -22,18 +23,10 @@ PostgresDataSource.initialize()
 
 const app = express();
 
-//app.use(express.json());
-
-app.get("/users", (request,response) => {
-    //return response.send("Hello World - Matheus");
-    return response.json({message:"Hello World - Matheus"});
-})
+app.use(express.json());
+app.use(router);
 
 // 1 param => Rota (recurso API)
-// 2 param => request, responde
-
-app.post("/", (request, response) => {
-    return response.json({message:"Dados salvos com sucesso"});
-})
+// 2 param => request, response
 
 app.listen(3333, ()=> console.log("Server is running!"));
